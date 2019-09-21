@@ -19,4 +19,4 @@ LOG_LEVEL = logging.INFO
 DB_HOST = 'localhost'
 DB_NAME = 'weather'
 DB_USER = 'weather'
-# DB_PASSWORD = 'password'
+DB_PASSWORD = 'password'

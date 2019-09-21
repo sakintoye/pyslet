@@ -16,7 +16,7 @@ from pyslet.odata2 import csdl as edm
 from pyslet.odata2 import core as core
 from pyslet.odata2 import metadata as edmx
 from pyslet.odata2.memds import InMemoryEntityContainer
-from pyslet.odata2.server import ReadOnlyServer
+from pyslet.odata2.server import Server
 from pyslet.odata2.sqlds import SQLiteEntityContainer
 from pyslet.py2 import output, to_text
 
@@ -379,7 +379,7 @@ def main():
     """Executed when we are launched"""
     doc = load_metadata()
     make_container(doc)
-    server = ReadOnlyServer(serviceRoot=SERVICE_ROOT)
+    server = Server(serviceRoot=SERVICE_ROOT)
     server.SetModel(doc)
     t = threading.Thread(
         target=run_weather_server, kwargs={'weather_app': server})

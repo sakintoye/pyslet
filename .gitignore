@@ -29,4 +29,5 @@ samples/pyslet
 samples/noticeboard/pyslet
 pep8-count.txt
 flake8-count.txt
-
+venv
+.venv
